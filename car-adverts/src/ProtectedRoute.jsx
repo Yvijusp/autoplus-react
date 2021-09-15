@@ -17,7 +17,7 @@ const ProtectedRoute = () => {
       // return dispatch({ type: 'login', payload: localStorage.getItem('user') });
 
       // No user in localstorage redirecting to login page
-      return history.push('/autoplus-react/login');
+      return history.push('/login');
   }, []);
 
   return <MyAccount />;

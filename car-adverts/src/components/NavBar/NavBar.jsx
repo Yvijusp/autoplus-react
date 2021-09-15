@@ -26,17 +26,17 @@ const NavBar = () => {
         <nav>
           <ul>
             <li>
-              <Link to='/autoplus-react/'>Home</Link>
+              <Link to='/'>Home</Link>
             </li>
             {state.user ? (
               <li>
-                <Link to='/autoplus-react/myaccount'>
+                <Link to='/myaccount'>
                   My Account <FaUserAlt size='15' />
                 </Link>
               </li>
             ) : (
               <li>
-                <Link to='/autoplus-react/login'>Sign In / Sign Up</Link>
+                <Link to='/login'>Sign In / Sign Up</Link>
               </li>
             )}
           </ul>

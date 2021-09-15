@@ -6,6 +6,8 @@ import { FaUserAlt } from 'react-icons/fa';
 import { UserContext } from '../App';
 import Form from '../components/Form/Form';
 
+const endpoint = 'https://refactored-autoplus.herokuapp.com';
+
 const MyAccount = () => {
   // Hooks
   // -- state
@@ -32,9 +34,7 @@ const MyAccount = () => {
     (async () => {
       try {
         const userId = localStorage.getItem('user') || '';
-        const response = await axios.get(
-          'https://refactored-autoplus.herokuapp.com/user/' + userId
-        );
+        const response = await axios.get(`${endpoint}/user/` + userId);
 
         if (isMounted) setUser([response.data]);
       } catch (error) {
@@ -47,12 +47,10 @@ const MyAccount = () => {
     };
   }, [user]);
 
-  console.log(user);
-
   const handleLogout = () => {
     localStorage.removeItem('user');
     dispatch({ type: 'logout' });
-    history.push('/autoplus-react/');
+    history.push('/');
   };
 
   const carFormHandler = async (e) => {
@@ -69,12 +67,9 @@ const MyAccount = () => {
     };
 
     try {
-      await axios.put(
-        `https://refactored-autoplus.herokuapp.com/add/${user[0]._id}`,
-        {
-          ...car,
-        }
-      );
+      await axios.put(`${endpoint}/cars/add/${user[0]._id}`, {
+        ...car,
+      });
 
       setMake('');
       setModel('');
@@ -83,15 +78,13 @@ const MyAccount = () => {
       setMessage('Car added');
       messageRef.current.classList.add('form-message', 'form-message-success');
     } catch (error) {
-      console.log(error.data.response);
+      console.log(error.data);
     }
   };
 
   const handleDeleteClick = async (e, carId) => {
     try {
-      await axios.delete(
-        `https://refactored-autoplus.herokuapp.com/cars/delete/${carId}`
-      );
+      await axios.delete(`${endpoint}/cars/delete/${carId}`);
     } catch (error) {
       console.log(error);
     }

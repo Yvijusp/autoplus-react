@@ -51,7 +51,7 @@ const Login = () => {
 
       localStorage.setItem('user', response.data.user);
       dispatch({ type: 'login', payload: localStorage.getItem('user') });
-      history.push('/autoplus-react/myaccount');
+      history.push('/myaccount');
     } catch (err) {
       setLoginEmail('');
       setLoginPassword('');
@@ -100,7 +100,7 @@ const Login = () => {
       if (response.data.status === 'success') {
         dispatch({ type: 'register', payload: response.data.user.id });
         localStorage.setItem('user', response.data.user.id);
-        history.push('/autoplus-react/myaccount');
+        history.push('/myaccount');
       }
     } catch (error) {
       setRegisterMessage(error.data.message);

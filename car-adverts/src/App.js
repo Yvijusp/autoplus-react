@@ -42,12 +42,9 @@ function App() {
         <Router>
           <NavBar />
           <Switch>
-            <Route exact path='/autoplus-react/' component={Home} />
-            <Route path='/autoplus-react/login' component={Login} />
-            <Route
-              path='/autoplus-react/myaccount'
-              component={ProtectedRoute}
-            />
+            <Route exact path='/' component={Home} />
+            <Route path='/login' component={Login} />
+            <Route path='/myaccount' component={ProtectedRoute} />
           </Switch>
         </Router>
       </UserContext.Provider>
