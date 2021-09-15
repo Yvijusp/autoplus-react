@@ -1,0 +1,28 @@
+/* Mobile */
+/* login.html */
+main .container #signin,
+main .container #signup {
+  padding: 30px;
+}
+
+main .container section h2 span {
+  font-weight: 400;
+}
+
+main .container #signup {
+  margin-top: 35px;
+}
+
+/* Tablter */
+@media screen and (min-width: 1024px) {
+  /* main */
+  /* login.html */
+  main .container .forms-container {
+    display: flex;
+  }
+  main .container #signin,
+  main .container #signup {
+    width: calc(100% / 2 - 30px);
+    margin: 0 10px;
+  }
+}

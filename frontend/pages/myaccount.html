@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autoplus-simulation</title>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/utilities.css" />
+    <link rel="stylesheet" href="../styles/myaccount.css" />
+    <!-- Custom js -->
+    <!-- components -->
+    <script defer src="../components/nav.js"></script>
+    <!-- Logic -->
+    <script defer src="../scripts/account.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="logo">Cars adverts</div>
+        <nav>
+          <!-- Created using nav.js -->
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="greeting"></section>
+        <section id="user-info">
+          <div id="user-info--container" class="card-shadow text-center"></div>
+          <div id="user-cars--container">
+            <div id="user-cars--list"></div>
+            <div id="user-cars--add-new" class="card-shadow">
+              <!-- FORM to add a car to user account -->
+              <h6 class="text-center">Got cars for sale?</h6>
+              <h2 class="text-center">Enter car information</h2>
+              <form class="form" id="car-form">
+                <div class="form-control">
+                  <label class="form-label" for="car-make">Make</label>
+                  <input class="form-input" type="text" name="car-make"
+                  Makear-make" required />
+                </div>
+
+                <div class="form-control">
+                  <label class="form-label" for="car-model">Model</label>
+                  <input class="form-input" type="text" name="car-model"
+                  Modelar-model" required />
+                </div>
+
+                <div class="form-control">
+                  <label class="form-label" for="car-year">Year</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="car-year"
+                    id="car-year"
+                    pattern="([0-9]+)"
+                    title="Please enter numbers"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="form-label" for="car-price">Price</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="car-price"
+                    id="car-price"
+                    pattern="([0-9]+)"
+                    title="Please enter numbers"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <input
+                    type="submit"
+                    value="Add car"
+                    class="btn-primary btn-primary-submit"
+                  />
+                </div>
+              </form>
+              <p id="car-input--message" class="hidden"></p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer><div class="container"></div></footer>
+  </body>
+</html>

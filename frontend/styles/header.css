@@ -1,0 +1,40 @@
+/* Mobile */
+/* Header */
+header {
+  background-color: var(--primary-color);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container div {
+  color: var(--text-light-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header .container nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header .container nav ul li {
+  padding: 15px;
+}
+
+header .container nav ul li a {
+  color: var(--text-light-color);
+  text-decoration: none;
+}
+header .container nav ul li:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+header .container nav ul li:hover a {
+  color: var(--primary-color);
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autoplus-simulation</title>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/utilities.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <!-- Custom js -->
+    <!-- components -->
+    <script defer src="../components/nav.js"></script>
+    <!-- Logic -->
+    <script defer src="../scripts/login.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="logo">Cars adverts</div>
+        <nav>
+          <!-- Created using nav.js -->
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section>
+          <h1 class="text-center headline">Sign up/ Sign in</h1>
+        </section>
+
+        <div class="forms-container">
+          <section id="signin" class="card-shadow">
+            <h2><span>Have an account?</span> Sign in!</h2>
+            <form class="form" id="signin-form">
+              <div class="form-control">
+                <label class="form-label" for="loginEmail">Email</label>
+                <input
+                  class="form-input"
+                  type="email"
+                  name="loginEmail"
+                  id="loginEmail"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <label class="form-label" for="loginPass">Password</label>
+                <input
+                  class="form-input"
+                  type="password"
+                  name="loginPass"
+                  id="loginPass"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <input
+                  type="submit"
+                  value="Sign in"
+                  class="btn-primary btn-primary-submit"
+                />
+              </div>
+            </form>
+            <p id="signin-message" class="hidden"></p>
+          </section>
+          <section id="signup" class="card-shadow">
+            <h2><span>New user?</span> Sign up!</h2>
+            <form class="form" id="signup-form">
+              <div class="form-control">
+                <label class="form-label" for="registerName">Name</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  name="registerName"
+                  id="registerName"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <label class="form-label" for="registerSurname">Surname</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  name="registerSurname"
+                  id="registerSurname"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <label class="form-label" for="registerEmail">Email</label>
+                <input
+                  class="form-input"
+                  type="email"
+                  name="registerEmail"
+                  id="registerEmail"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <label class="form-label" for="registerPass">Password</label>
+                <input
+                  class="form-input"
+                  type="password"
+                  name="registerPass"
+                  id="registerPass"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <label class="form-label" for="registerConfirmPass"
+                  >Confirm password</label
+                >
+                <input
+                  class="form-input"
+                  type="password"
+                  name="registerConfirmPass"
+                  id="registerConfirmPass"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <input
+                  type="submit"
+                  value="Sign up"
+                  class="btn-primary-submit btn-primary"
+                />
+              </div>
+            </form>
+            <p id="signup-message" class="hidden"></p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer><div class="container"></div></footer>
+  </body>
+</html>
